@@ -85,13 +85,13 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:5px}
  background:transparent;
  border:0;
 }
-.hero-symbol img{
+.hero-symbol svg{
  display:block;
- width:clamp(150px,17vw,230px);
+ width:clamp(170px,20vw,260px);
  height:auto;
  object-fit:contain;
  image-rendering:pixelated;
- filter:drop-shadow(0 0 18px rgba(192,34,27,.24));
+ filter:drop-shadow(0 0 18px rgba(231,51,28,.34));
 }
 
 .cases{padding:82px 0 100px;scroll-margin-top:20px}
@@ -171,7 +171,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:5px}
  .hero{grid-template-columns:1fr;min-height:0;padding:52px 0 66px}
  .hero h1{font-size:clamp(68px,10vw,95px)}
  .hero-symbol{margin:20px auto 0;min-height:230px}
- .hero-symbol img{width:180px}
+ .hero-symbol svg{width:180px}
  .case-grid{grid-template-columns:1fr;max-width:540px;margin:auto}
  .case-card{height:425px}
  .case-name{font-size:33px;min-height:0}
@@ -189,7 +189,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:5px}
  .intro{padding-left:15px}
  .intro p{font-size:14px;line-height:1.65}
  .hero-symbol{min-height:200px}
- .hero-symbol img{width:150px}
+ .hero-symbol svg{width:150px}
  .cases{padding:58px 0 74px}
  .section-top h2{font-size:46px}
  .case-card{height:405px;padding:17px}
