@@ -1,51 +1,39 @@
 (() => {
   "use strict";
-
-  const cases = {
-    heredistho: { index: "01", title: "A Maldição de Heredistho", status: "Já jogado" },
-    principe: { index: "02", title: "O Culto do Príncipe", status: "Já jogado" },
-    cataclisma: { index: "03", title: "O Cataclisma", status: "Ainda não jogado" }
+  const casos = {
+    heredistho: {numero:"01",titulo:"A Maldição de Heredistho",estado:"JÁ JOGADO"},
+    principe: {numero:"02",titulo:"O Culto do Príncipe",estado:"JÁ JOGADO"},
+    cataclisma: {numero:"03",titulo:"O Cataclisma",estado:"AINDA NÃO JOGADO"}
+  };
+  const janela = document.getElementById("case-dialog");
+  const fechar = () => {
+    if (typeof janela.close === "function") janela.close();
+    else janela.removeAttribute("open");
+  };
+  const abrir = chave => {
+    const caso = casos[chave];
+    if (!caso) return;
+    document.getElementById("dialog-number").textContent = "CASO " + caso.numero;
+    document.getElementById("dialog-title").textContent = caso.titulo;
+    document.getElementById("dialog-status").textContent = caso.estado;
+    if (typeof janela.showModal === "function") janela.showModal();
+    else janela.setAttribute("open","");
   };
 
-  const dialog = document.getElementById("case-dialog");
-  const closeButton = document.getElementById("dialog-close");
-  const backButton = document.getElementById("dialog-back");
-
-  function openCase(key) {
-    const entry = cases[key];
-    if (!entry) return;
-
-    document.getElementById("dialog-index").textContent = "CASO " + entry.index;
-    document.getElementById("dialog-title").textContent = entry.title;
-    document.getElementById("dialog-status").textContent = entry.status;
-
-    if (typeof dialog.showModal === "function") dialog.showModal();
-    else dialog.setAttribute("open", "");
-  }
-
-  function closeCase() {
-    if (typeof dialog.close === "function") dialog.close();
-    else dialog.removeAttribute("open");
-  }
-
-  document.querySelectorAll("[data-case]").forEach(card => {
-    card.addEventListener("click", () => openCase(card.dataset.case));
+  document.querySelectorAll("[data-case]").forEach(botao => {
+    botao.addEventListener("click", () => abrir(botao.dataset.case));
+  });
+  document.getElementById("dialog-close").addEventListener("click",fechar);
+  document.getElementById("dialog-back").addEventListener("click",fechar);
+  janela.addEventListener("click",evento => {
+    if (evento.target === janela) fechar();
   });
 
-  closeButton.addEventListener("click", closeCase);
-  backButton.addEventListener("click", closeCase);
-
-  dialog.addEventListener("click", event => {
-    if (event.target === dialog) closeCase();
-  });
-
-  document.addEventListener("keydown", event => {
-    if (dialog.open || event.altKey || event.ctrlKey || event.metaKey) return;
-
-    const el = document.activeElement;
-    if (el && (["INPUT", "SELECT", "TEXTAREA"].includes(el.tagName) || el.isContentEditable)) return;
-
-    const shortcut = { "1": "heredistho", "2": "principe", "3": "cataclisma" }[event.key];
-    if (shortcut) openCase(shortcut);
+  document.addEventListener("keydown",evento => {
+    if (janela.open || evento.altKey || evento.ctrlKey || evento.metaKey) return;
+    const foco = document.activeElement;
+    if (foco && (foco.isContentEditable || ["INPUT","TEXTAREA","SELECT"].includes(foco.tagName))) return;
+    const mapa = {"1":"heredistho","2":"principe","3":"cataclisma"};
+    if (mapa[evento.key]) abrir(mapa[evento.key]);
   });
 })();
