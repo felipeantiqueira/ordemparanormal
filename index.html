@@ -3,146 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080909">
-  <meta name="description" content="GNOLAND: um portal de terror e investigação para explorar os casos A Maldição de Heredistho, O Culto do Príncipe e O Cataclisma.">
-  <title>GNOLAND — Arquivo de Casos</title>
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="GNOLAND. Os casos do nosso universo de Ordem Paranormal.">
+  <title>GNOLAND | Ordem Paranormal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel+Decorative:wght@400;700;900&family=IM+Fell+English:ital@0;1&family=Special+Elite&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#casos">Ir para os casos</a>
-  <div class="screen-grain" aria-hidden="true"></div>
-  
-  
-
-  <div class="site-shell" id="inicio">
+  <div class="site-wrap" id="inicio">
     <header class="site-header">
       <a class="brand" href="#inicio" aria-label="GNOLAND, início">
-        <span class="brand-emblem" aria-hidden="true">✢</span>
-        <span class="brand-type">GNOLAND<small>WEB DE UM UNIVERSO COMPARTILHADO</small></span>
+        <img src="assets/gnomo.svg" alt="" width="34" height="54">
+        <span>GNOLAND</span>
       </a>
-      <nav class="nav-main" aria-label="Navegação principal">
-        <a class="nav-link is-current" href="#inicio" aria-current="page">INÍCIO</a>
-        <a class="nav-link" href="#casos">CASOS</a>
-        <button class="nav-link nav-button" type="button" id="about-open">SOBRE</button>
+      <nav aria-label="Navegação principal">
+        <a href="#casos">Os casos</a>
       </nav>
-      <span class="header-note">TERROR &amp; INVESTIGAÇÃO</span>
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
+      <section class="hero" aria-labelledby="hero-heading">
         <div class="hero-copy">
-          <div class="eyebrow"><span class="eyebrow-line"></span> <span>UNIVERSO DAS NOSSAS MESAS</span><span class="eyebrow-code">/ I — III</span></div>
-          <h1 id="hero-title"><span class="title-intro">Um espaço para nossas histórias de Ordem Paranormal</span><span class="title-wordmark">GNOLAND</span><span class="title-ornament" aria-hidden="true">✢ &nbsp; ━━━ &nbsp; ◈ &nbsp; ━━━ &nbsp; ✢</span></h1>
-          <p class="hero-lead">Para quem viveu as histórias — e para quem ainda vai descobrir o que vem depois.</p>
-          <div class="hero-actions">
-            <a href="#casos" class="main-action"><span>VER NOSSOS CASOS</span><span class="action-arrow" aria-hidden="true">↘</span></a>
-            <span class="hero-aside">DESÇA PARA EXPLORAR <span aria-hidden="true">↓</span></span>
-          </div>
+          <div class="eyebrow"><span class="eyebrow-ornament" aria-hidden="true">✦</span> NOSSAS MESAS DE ORDEM PARANORMAL</div>
+          <h1 id="hero-heading">GNOLAND<span class="title-period">.</span></h1>
+          <p>Um lugar para revisitar os casos que vivemos juntos.</p>
+          <a class="explore-button" href="#casos">Explorar os casos <span aria-hidden="true">↓</span></a>
         </div>
-
-        <div class="hero-plate" aria-hidden="true">
-          <span class="plate-ink">G</span>
-          <span class="plate-scratch">⸸</span>
-          <span class="plate-caption">NOSSAS HISTÓRIAS<br>NO MESMO UNIVERSO</span>
+        <div class="hero-illustration" aria-hidden="true">
+          <span class="illustration-ornament illustration-ornament-top">✣</span>
+          <img src="assets/gnomo.svg" alt="" width="468" height="745">
+          <span class="illustration-ornament illustration-ornament-bottom">✣</span>
         </div>
-        <span class="hero-side-label" aria-hidden="true">GNOLAND — HISTÓRIAS ENTRE AMIGOS</span>
       </section>
 
-      <div class="system-strip" aria-label="Sobre as campanhas">
-        <span class="strip-info">✢ UM UNIVERSO COMPARTILHADO</span>
-        <span class="strip-divider" aria-hidden="true"></span>
-        <span>DOIS CASOS JÁ JOGADOS</span>
-        <span class="strip-divider hide-small" aria-hidden="true"></span>
-        <span class="hide-small">UMA HISTÓRIA AINDA POR VIR</span>
-      </div>
-
-      <section class="cases-section" id="casos" aria-labelledby="cases-title">
-        <div class="section-topline">
-          <div>
-            <div class="section-kicker">I / ARQUIVOS INDEXADOS</div>
-            <h2 id="cases-title">OS TRÊS <span>CASOS</span></h2>
-          </div>
-          <p>Cada caso guarda uma parte das nossas mesas. O conteúdo será adicionado conforme formos escolhendo o que compartilhar.</p>
+      <section class="cases" id="casos" aria-labelledby="cases-heading">
+        <div class="section-heading">
+          <span class="section-symbol" aria-hidden="true">✦</span>
+          <h2 id="cases-heading">Os casos</h2>
+          <span class="section-count">03</span>
         </div>
-
         <div class="case-grid">
-          <button type="button" class="case-card case-heredistho" data-case="heredistho" aria-label="Abrir A Maldição de Heredistho">
-            <span class="card-frame card-frame-top-left"></span><span class="card-frame card-frame-bottom-right"></span>
-            <span class="card-scan" aria-hidden="true"></span>
-            <span class="card-header"><span class="case-index">REGISTRO / 001</span><span class="case-cross" aria-hidden="true">✳</span></span>
-            <span class="case-art" aria-hidden="true"><img src="assets/simbolo-heredistho.svg" alt="" loading="lazy" width="303" height="320"></span>
-            <span class="case-card-bottom">
-              <span class="case-overline">CASO I <small>· JÁ JOGADO</small></span>
-              <span class="case-name">A MALDIÇÃO DE<br><em>HEREDISTHO</em></span>
-              <span class="case-card-footer"><span>ABRIR ARQUIVO</span><span class="card-arrow" aria-hidden="true">↗</span></span>
+          <button class="case-card case-heredistho" data-case="heredistho" type="button" aria-label="Abrir A Maldição de Heredistho">
+            <span class="case-card-number">01</span>
+            <span class="case-symbol"><img src="assets/simbolo-heredistho.svg" alt="" width="303" height="320" loading="lazy"></span>
+            <span class="case-details">
+              <span class="case-status">Já jogado</span>
+              <span class="case-title">A Maldição de<br>Heredistho</span>
+              <span class="case-action">Abrir caso <span aria-hidden="true">↗</span></span>
             </span>
           </button>
-
-          <button type="button" class="case-card case-principe" data-case="principe" aria-label="Abrir O Culto do Príncipe">
-            <span class="card-frame card-frame-top-left"></span><span class="card-frame card-frame-bottom-right"></span>
-            <span class="card-scan" aria-hidden="true"></span>
-            <span class="card-header"><span class="case-index">REGISTRO / 002</span><span class="case-cross" aria-hidden="true">✳</span></span>
-            <span class="case-art" aria-hidden="true"><img src="assets/simbolo-principe.svg" alt="" loading="lazy" width="288" height="290"></span>
-            <span class="case-card-bottom">
-              <span class="case-overline">CASO II <small>· JÁ JOGADO</small></span>
-              <span class="case-name">O CULTO DO<br><em>PRÍNCIPE</em></span>
-              <span class="case-card-footer"><span>ABRIR ARQUIVO</span><span class="card-arrow" aria-hidden="true">↗</span></span>
+          <button class="case-card case-principe" data-case="principe" type="button" aria-label="Abrir O Culto do Príncipe">
+            <span class="case-card-number">02</span>
+            <span class="case-symbol"><img src="assets/simbolo-principe.svg" alt="" width="288" height="290" loading="lazy"></span>
+            <span class="case-details">
+              <span class="case-status">Já jogado</span>
+              <span class="case-title">O Culto do<br>Príncipe</span>
+              <span class="case-action">Abrir caso <span aria-hidden="true">↗</span></span>
             </span>
           </button>
-
-          <button type="button" class="case-card case-cataclisma" data-case="cataclisma" aria-label="Abrir O Cataclisma">
-            <span class="card-frame card-frame-top-left"></span><span class="card-frame card-frame-bottom-right"></span>
-            <span class="card-scan" aria-hidden="true"></span>
-            <span class="card-header"><span class="case-index">REGISTRO / 003</span><span class="case-cross" aria-hidden="true">✳</span></span>
-            <span class="case-art case-art-unknown" aria-hidden="true"><span class="unknown-mark">?</span></span>
-            <span class="case-card-bottom">
-              <span class="case-overline">CASO III <small>· AINDA NÃO JOGADO</small></span>
-              <span class="case-name">O<br><em>CATACLISMA</em></span>
-              <span class="case-card-footer"><span>VER PRÓXIMO CASO</span><span class="card-arrow" aria-hidden="true">↗</span></span>
+          <button class="case-card case-cataclisma" data-case="cataclisma" type="button" aria-label="Abrir O Cataclisma">
+            <span class="case-card-number">03</span>
+            <span class="case-symbol case-unrevealed"><span aria-hidden="true">?</span></span>
+            <span class="case-details">
+              <span class="case-status">Ainda não jogado</span>
+              <span class="case-title">O Cataclisma</span>
+              <span class="case-action">Abrir caso <span aria-hidden="true">↗</span></span>
             </span>
           </button>
         </div>
-        <div class="cases-footnote"><span>↳ O ARQUIVO CONTINUARÁ CRESCENDO</span><span>DICA: USE AS TECLAS 1, 2 OU 3 PARA ABRIR UM CASO</span></div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-brand">GNOLAND<span> ✢ </span></div>
-      <span>FEITO PARA OS AMIGOS QUE VIVERAM ESSAS HISTÓRIAS.</span>
-      <a href="#inicio">VOLTAR AO TOPO ↑</a>
+      <span class="footer-name">GNOLAND</span>
+      <span>Feito para os nossos amigos.</span>
+      <a href="#inicio">Voltar ao início ↑</a>
     </footer>
   </div>
 
-  <dialog id="case-dialog" class="archive-dialog" aria-labelledby="dialog-title">
-    <div class="dialog-shell">
-      <div class="dialog-top"><span>ARQUIVO INDIVIDUAL <span class="dialog-serial" id="dialog-serial">/ 001</span></span><button class="dialog-close" id="dialog-close" type="button" aria-label="Fechar janela">×</button></div>
-      <div class="dialog-middle">
-        <span class="dialog-kicker"><span class="dialog-led"></span> REGISTRO SELECIONADO</span>
-        <div class="dialog-number" id="dialog-number" aria-hidden="true">01</div>
-        <h2 id="dialog-title">A MALDIÇÃO DE HEREDISTHO</h2>
-        <div class="dialog-rule"></div>
-        <p id="dialog-description">Ainda estamos preparando esta página. Seu conteúdo será escolhido por nós, sem adicionar histórias ou revelações antes da hora.</p>
-        <div class="dialog-state"><span class="dialog-state-icon" aria-hidden="true">◌</span><span id="dialog-status">CONTEÚDO EM PREPARAÇÃO</span></div>
+  <dialog class="case-dialog" id="case-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-content">
+      <div class="dialog-top">
+        <span id="dialog-index">CASO 01</span>
+        <button type="button" class="dialog-close" id="dialog-close" aria-label="Fechar">×</button>
       </div>
-      <div class="dialog-bottom"><span>FIM DO REGISTRO TEMPORÁRIO</span><button class="dialog-back" id="dialog-back" type="button">VOLTAR AOS CASOS <span aria-hidden="true">↗</span></button></div>
-    </div>
-  </dialog>
-
-  <dialog id="about-dialog" class="archive-dialog about-dialog" aria-labelledby="about-title">
-    <div class="dialog-shell">
-      <div class="dialog-top"><span>SOBRE O PROJETO / 001</span><button class="dialog-close" id="about-close" type="button" aria-label="Fechar janela">×</button></div>
-      <div class="dialog-middle">
-        <span class="dialog-kicker"><span class="dialog-led"></span> VISÃO GERAL</span>
-        <h2 id="about-title">GNOLAND:<br>UM UNIVERSO, TRÊS CASOS.</h2>
-        <div class="dialog-rule"></div>
-        <p>GNOLAND é nosso espaço para reunir os casos das mesas de Ordem Paranormal que compartilham o mesmo universo. Aqui, aos poucos, vamos acrescentar páginas, lembranças, quizzes e experiências interativas.</p>
-        <div class="dialog-state"><span class="dialog-state-icon" aria-hidden="true">◌</span><span>PROJETO EM DESENVOLVIMENTO</span></div>
-      </div>
-      <div class="dialog-bottom"><span>GNOLAND / ÍNDICE</span><button class="dialog-back" id="about-back" type="button">VOLTAR AO INÍCIO <span aria-hidden="true">↗</span></button></div>
+      <h2 id="dialog-title">A Maldição de Heredistho</h2>
+      <p id="dialog-status">Já jogado</p>
+      <div class="dialog-divider"></div>
+      <p class="dialog-placeholder">Página em preparação.</p>
+      <button type="button" class="dialog-back" id="dialog-back">Voltar aos casos</button>
     </div>
   </dialog>
 </body>
