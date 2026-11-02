@@ -56,11 +56,11 @@ a:focus-visible, button:focus-visible {
 .site-header nav a:hover { color: #fff; }
 .hero {
   display: grid;
-  grid-template-columns: 1.1fr .9fr;
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 280px);
   align-items: center;
-  min-height: 610px;
-  gap: 25px;
-  padding: 52px 0 65px;
+  gap: 34px;
+  min-height: 385px;
+  padding: 55px 0 62px;
   border-bottom: 1px solid var(--line);
   position: relative;
   overflow: hidden;
@@ -101,37 +101,31 @@ a:focus-visible, button:focus-visible {
 }
 .explore-button:hover { background: #42171b; transform: translateY(-2px); }
 .explore-button span { color: #cd7071; font-size: 18px; }
-.hero-illustration {
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  position: relative; min-height: 480px;
+
+.hero-seal {
+  width: 100%;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
-.hero-illustration::before {
+.hero-seal::before {
   content: "";
   position: absolute;
-  width: 67%; height: 80%;
-  border: 1px solid #2c1b1c;
+  inset: 25px 15px;
+  border: 1px solid #382124;
   transform: rotate(5deg);
-  pointer-events: none;
 }
-.hero-illustration::after {
-  content: "";
-  position: absolute; bottom: 16%; right: 12%;
-  width: 22%; height: 1px; background: #792b31;
-  transform: rotate(-15deg);
-}
-.hero-illustration img {
-  display: block; width: auto; height: min(450px,37vw); max-width: 86%;
+.hero-seal img {
+  width: auto;
+  height: 220px;
+  max-width: 68%;
   object-fit: contain;
-  opacity: .95;
-  filter: drop-shadow(0 5px 18px #521a1d3d);
+  position: relative;
+  z-index: 1;
+  opacity: .85;
 }
-.illustration-ornament {
-  position: absolute; z-index: 1; color: #913339;
-  font: 25px var(--heading);
-}
-.illustration-ornament-top { right: 12%; top: 7%; }
-.illustration-ornament-bottom { left: 14%; bottom: 7%; }
 
 .cases { padding: 85px 0 108px; scroll-margin-top: 15px; }
 .section-heading {
@@ -259,17 +253,17 @@ a:focus-visible, button:focus-visible {
 .dialog-back:hover { background: #451b21; }
 
 @media(max-width: 1020px) {
-  .hero { min-height: 540px; }
-  .hero-illustration { min-height: 380px; }
+  .hero { min-height: 360px; }
+  .hero-seal { height: 225px; }
   .case-card { padding: 22px 18px 20px; height: 465px; }
   .case-title { font-size: 25px; }
 }
 @media(max-width: 740px) {
   .site-header { height: 80px; }
-  .hero { display: flex; flex-direction: column; align-items: flex-start; gap: 15px; padding: 70px 0 48px; min-height: 0; }
+  .hero { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: 56px 0 42px; min-height: 0; }
   .hero h1 { font-size: clamp(62px,12vw,95px); }
-  .hero-illustration { align-self: center; min-height: 265px; max-height: 350px; width: min(100%,410px); }
-  .hero-illustration img { height: 300px; max-width: 75%; }
+  .hero-seal { align-self: center; height: 180px; width: 170px; }
+  .hero-seal img { height: 155px; max-width: 80%; }
   .cases { padding: 65px 0 80px; }
   .case-grid { grid-template-columns: 1fr; }
   .case-card { height: 405px; padding: 23px; }
@@ -285,8 +279,8 @@ a:focus-visible, button:focus-visible {
   .eyebrow { font-size: 10px; letter-spacing: 1.2px; }
   .hero { padding-top: 61px; }
   .hero h1 { font-size: clamp(56px,13.5vw,72px); letter-spacing: -2px; }
-  .hero-illustration { min-height: 260px; }
-  .hero-illustration img { height: 260px; }
+  .hero-seal { height: 155px; }
+  .hero-seal img { height: 145px; }
   .section-heading h2 { font-size: 35px; }
   .case-card { height: 390px; }
   .case-symbol img,.case-heredistho .case-symbol img,.case-principe .case-symbol img { height: 195px; }
@@ -297,4 +291,19 @@ a:focus-visible, button:focus-visible {
 @media(prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *,*::before,*::after { transition-duration: .01ms!important; animation-duration: .01ms!important; }
+}
+/* Keep the page readable even when remote fonts fail. */
+.hero h1, .brand span { overflow-wrap: anywhere; }
+.case-card { contain: layout; }
+.case-symbol img { height: auto; max-height: 240px; }
+@media (max-width:740px) {
+  .hero-seal { display: none; }
+  .hero { padding-top: 59px; }
+  .case-symbol img { width: auto; max-height: 220px; }
+  .case-card { height: 410px; }
+}
+@media (max-width:440px) {
+  .hero h1 { font-size: clamp(46px,13vw,66px); }
+  .case-symbol img { max-height: 194px; }
+  .case-card { height: 395px; }
 }
