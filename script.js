@@ -33,7 +33,11 @@
     if (janela.open || evento.altKey || evento.ctrlKey || evento.metaKey) return;
     const foco = document.activeElement;
     if (foco && (foco.isContentEditable || ["INPUT","TEXTAREA","SELECT"].includes(foco.tagName))) return;
-    const mapa = {"1":"heredistho","2":"principe","3":"cataclisma"};
+    if (evento.key === "1") {
+      window.location.assign("heredistho.html");
+      return;
+    }
+    const mapa = {"2":"principe","3":"cataclisma"};
     if (mapa[evento.key]) abrir(mapa[evento.key]);
   });
 })();
