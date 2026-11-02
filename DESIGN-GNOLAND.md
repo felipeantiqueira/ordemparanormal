@@ -1,33 +1,34 @@
-# GNOLAND
+# Carnicinho e Outras Desgraças
 
-Direção visual e conteúdo do site.
+## Identidade
+O nome oficial do site é **Carnicinho e Outras Desgraças**. Antes, o projeto era chamado GNOLAND. A URL do repositório permanece a mesma até que o criador decida alterá-la.
 
-## Objetivo
+O site é uma web de RPG para o mestre e seus amigos, com experiências interativas futuras. O nome e a estética equilibram humor macabro, terror e investigação.
 
-O site foi criado para o mestre e seus amigos revisitarem os casos das mesas de Ordem Paranormal do mesmo universo. A web poderá ganhar novos recursos interativos conforme o grupo decidir.
+## Mascote
+O Carnicinho é a figura em pixel art enviada pelo criador em 2 de novembro de 2026. A home utiliza a vista frontal no cabeçalho e as quatro vistas em destaque. Os fundos de tabuleiro cinza foram removidos e as cores principais da pixel art foram preservadas. As pequenas imagens transparentes estão incorporadas diretamente no HTML em formato PNG.
 
-## Aparência
-
-- Fundo do site preto absoluto (#000000).
-- Logo oficial de GNOLAND: desenho de gnomo fornecido pelo usuário. Versão vetorizada com fundo transparente em assets/gnomo.svg.
-- Priorizar leitura fácil. Fontes atuais: DM Sans para textos e Marcellus para títulos.
-- Terror e investigação como direções centrais. Sombrio e discreto, sem aparência de interface tecnológica.
-- Não utilizar círculo giratório, painéis de sistema, efeitos digitais ou excesso de ornamentos.
-- Evitar frases repetidas, textos de preenchimento e explicações desnecessárias.
-- Não usar travessões (—) ou meia-risca (–) nas frases exibidas no site.
-- Garantir funcionamento em telas pequenas e suporte a teclado e preferência por movimento reduzido.
+## Visual
+- Fundo preto e cinzas escuros em textura pixelada.
+- Cores base do Carnicinho: preto, cinza, branco envelhecido e marrom.
+- Tipografia legível: DM Sans nos textos e Pixelify Sans nos títulos e controles.
+- Sem aparência tecnológica.
+- Interface adaptável para computador e celular.
+- Sem travessões nos textos.
+- Textos curtos fora da apresentação enviada pelo criador.
 
 ## Casos
+- A Maldição de Heredistho: vermelho, caso já jogado. Usa o símbolo vermelho enviado pelo usuário.
+- O Culto do Príncipe: amarelo, caso já jogado. Usa o símbolo do bode enviado pelo usuário.
+- O Cataclisma: azul, caso ainda não jogado. Sem símbolo ou história inventados.
 
-- A Maldição de Heredistho: já jogado. Utilizar o símbolo vermelho enviado pelo usuário.
-- O Culto do Príncipe: já jogado. Utilizar o símbolo do bode enviado pelo usuário.
-- O Cataclisma: ainda não jogado. Não inventar símbolo ou informações.
-- Assets dos símbolos em assets/simbolo-heredistho.svg e assets/simbolo-principe.svg.
+## Apresentação aprovada
+Olá a todos, sejam bem-vindos ao Carnicinho e Outras Desgraças!
 
-## Restrições narrativas
+Este temível site nasceu com um duplo propósito: eternizar as nossas aventuras de RPG e, claro, nos divertir com tudo o que o Carnicinho é capaz de aprontar. Explorem este mundo repleto de mistérios e boa sorte ao tentar desvendar os segredos que o Carnicinho espalhou pelos cantos mais sombrios.
 
-Não acrescentar histórias, personagens, eventos, pistas, monstros ou outros conteúdos de campanhas sem decisão explícita do criador. Nenhuma informação de conversas anteriores deve ser inserida automaticamente.
+## Conteúdo narrativo
+Não preencher histórias, personagens, pistas, documentos ou acontecimentos com material de conversas anteriores. Somente incluir o que o criador explicitamente aprovar.
 
-## Tecnologias
-
-HTML, CSS e JavaScript, compatíveis com GitHub Pages. Arquivos atuais: index.html, styles.css e script.js.
+## Técnica
+A versão inicial usa index.html, styles.css e script.js para hospedagem gratuita no GitHub Pages. Os três casos abrem janelas provisórias, prontas para receber páginas futuras.
