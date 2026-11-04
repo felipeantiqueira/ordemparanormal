@@ -1,0 +1,115 @@
+/* Ornamentos autorais inspirados na linguagem visual do Outro Lado. */
+.occult-mark{
+  --sigil-color:#bfb6ac;
+  display:inline-block;flex:none;width:42px;height:42px;
+  background:var(--sigil-color);
+  -webkit-mask-position:center;-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;
+  mask-position:center;mask-repeat:no-repeat;mask-size:contain;
+}
+.mark-blood{--sigil-color:#b94b57;-webkit-mask-image:url("sigilo-sangue.svg");mask-image:url("sigilo-sangue.svg")}
+.mark-death{--sigil-color:#b0a8a1;-webkit-mask-image:url("sigilo-morte.svg");mask-image:url("sigilo-morte.svg")}
+.mark-knowledge{--sigil-color:#ddba58;-webkit-mask-image:url("sigilo-conhecimento.svg");mask-image:url("sigilo-conhecimento.svg")}
+.mark-energy{--sigil-color:#a779cb;-webkit-mask-image:url("sigilo-energia.svg");mask-image:url("sigilo-energia.svg")}
+.mark-fear{--sigil-color:#deddd7;-webkit-mask-image:url("sigilo-medo.svg");mask-image:url("sigilo-medo.svg")}
+
+.hero,.case-hero{position:relative;isolation:isolate}
+.hero > :not(.occult-mandala),.case-hero > :not(.occult-mandala){position:relative;z-index:1}
+.occult-mandala{
+  position:absolute;z-index:0;pointer-events:none;
+  display:block;width:clamp(280px,46vw,590px);aspect-ratio:1;
+  background:var(--occult-main,#8b424d);
+  -webkit-mask:url("selo-ritual.svg") center/contain no-repeat;
+  mask:url("selo-ritual.svg") center/contain no-repeat;
+  opacity:.115;
+}
+.hero .occult-mandala{right:-5%;top:5%}
+.case-hero .occult-mandala{right:17%;top:50%;width:clamp(250px,34vw,440px);transform:translateY(-50%);opacity:.115}
+.case-blood{--occult-main:#b74855}
+.case-knowledge{--occult-main:#c2a343}
+.case-knowledge .case-hero .occult-mandala{opacity:.13}
+
+.occult-elements{
+  display:flex;align-items:center;justify-content:center;flex-wrap:wrap;
+  gap:clamp(15px,4vw,55px);
+  padding:21px 10px 26px;margin:0;
+  border-bottom:1px solid #302927;
+  background:linear-gradient(90deg,transparent,#17131377 50%,transparent);
+}
+.occult-element{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  min-width:73px;
+}
+.occult-element .occult-mark{width:32px;height:32px;opacity:.72;transition:opacity .2s,transform .2s}
+.occult-element span:last-child{
+  font:500 10px/1.2 var(--display,"Pixelify Sans",sans-serif);
+  color:#aaa099;letter-spacing:1px;text-transform:uppercase
+}
+.occult-element:hover .occult-mark{opacity:.95;transform:translateY(-2px)}
+
+.case-card .card-occult{
+  position:absolute;right:20px;top:54px;
+  width:43px;height:43px;opacity:.28;pointer-events:none;
+  transition:opacity .2s,transform .2s;
+}
+.case-card.heredistho .card-occult{--sigil-color:#e26875}
+.case-card.principe .card-occult{--sigil-color:#eed07f}
+.case-card.cataclisma .card-occult{--sigil-color:#77b7dc}
+.case-card:hover .card-occult{opacity:.65;transform:rotate(12deg)}
+
+.case-omens{
+  display:flex;align-items:center;gap:11px;margin-top:23px;
+  width:max-content;max-width:100%;padding:0 0 13px;
+  border-bottom:1px solid currentColor;color:var(--occult-main,#aa5058)
+}
+.case-omens::before,.case-omens::after{content:"";width:29px;height:1px;background:currentColor;opacity:.6}
+.case-omens .occult-mark{width:29px;height:29px;opacity:.88}
+.case-omens .mark-death{--sigil-color:#9c938f}
+.case-omens .mark-fear{--sigil-color:#c5beb5}
+.case-omens .mark-blood{--sigil-color:#d34f61}
+.case-omens .mark-knowledge{--sigil-color:#d5b342}
+
+.occult-seam{
+  display:flex;align-items:center;justify-content:center;gap:12px;
+  margin:6px auto 25px;width:min(100%,830px);
+  color:var(--occult-main,#b74b56);opacity:.67
+}
+.occult-seam::before,.occult-seam::after{
+  content:"";height:1px;flex:1;max-width:180px;
+  background:linear-gradient(90deg,transparent,currentColor)
+}
+.occult-seam::after{transform:scaleX(-1)}
+.occult-seam .occult-mark{width:34px;height:34px}
+.case-blood .occult-seam .occult-mark{--sigil-color:#bb5360}
+.case-knowledge .occult-seam .occult-mark{--sigil-color:#ccad52}
+
+.archive .tabs .tab{overflow:hidden}
+.archive .tabs .tab::after{
+  content:"";position:absolute;right:24px;top:-33px;width:105px;height:105px;
+  pointer-events:none;opacity:.06;background:var(--occult-main,#b14a54);
+  -webkit-mask:url("selo-ritual.svg") center/contain no-repeat;
+  mask:url("selo-ritual.svg") center/contain no-repeat
+}
+.archive .tabs .tab[aria-selected="true"]::after{opacity:.11}
+.quiz-shell{position:relative;isolation:isolate}
+.quiz-shell::before{
+  content:"";display:block;position:absolute;
+  width:140px;height:140px;top:8px;right:7px;
+  background:var(--occult-main,#ae4852);opacity:.08;
+  -webkit-mask:url("selo-ritual.svg") center/contain no-repeat;
+  mask:url("selo-ritual.svg") center/contain no-repeat;
+  pointer-events:none;z-index:0
+}
+.quiz-shell > *{position:relative;z-index:1}
+
+@media(max-width:640px){
+  .hero .occult-mandala{width:310px;right:-32px;top:26%;opacity:.085}
+  .case-hero .occult-mandala{width:265px;right:-30px;top:40%;opacity:.09}
+  .occult-elements{gap:7px 14px;padding:19px 4px}
+  .occult-element{min-width:56px}
+  .occult-element .occult-mark{width:28px;height:28px}
+  .occult-element span:last-child{font-size:9px;letter-spacing:0}
+  .case-card .card-occult{right:16px;top:45px}
+  .case-omens{margin-top:18px}
+  .archive .tabs .tab::after{width:70px;height:70px;right:-6px;top:-10px}
+}
+@media(prefers-reduced-motion:reduce){.case-card .card-occult,.occult-element .occult-mark{transition:none!important}}
