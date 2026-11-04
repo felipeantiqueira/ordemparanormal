@@ -9,8 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="principe.css?v=1">
+  <link rel="stylesheet" href="principe.css?v=2">
   <script src="heredistho.js?v=1" defer></script>
+  <script src="principe-quiz.js?v=1" defer></script>
 </head>
 <body>
 <a href="#arquivo" class="skip-link">Ir para as seções</a>
@@ -110,11 +111,53 @@
         </div>
       </section>
       <section class="tab-panel" id="panel-enigmas" role="tabpanel" tabindex="0" aria-labelledby="tab-enigmas" hidden>
-        <div class="panel-top"><span>SEÇÃO 05 / 06</span><span class="panel-state">VAZIO</span></div>
+        <div class="panel-top"><span>SEÇÃO 05 / 06</span><span class="panel-state">01 MINIJOGO</span></div>
         <h3>Enigmas e minijogos</h3>
-        <div class="empty-content">
-          <span class="empty-glyph" aria-hidden="true">□</span>
-          <p>Conteúdo em preparação.</p>
+        <div class="quiz-shell" id="quiz-principe" aria-label="Quiz de O Culto do Príncipe">
+          <div class="quiz-heading">
+            <span class="quiz-kicker">DESAFIO 01 / ARQUIVO DO PRÍNCIPE</span>
+            <h4>O quanto você se lembra?</h4>
+            <p>Responda a perguntas sobre os acontecimentos da campanha e descubra sua pontuação. A cada partida, você responde a 25 perguntas sorteadas de um banco com 90 questões, 30 por dificuldade.</p>
+          </div>
+          <div class="quiz-setup" id="quiz-setup">
+            <fieldset class="quiz-levels">
+              <legend>Escolha a dificuldade</legend>
+              <div class="quiz-level-grid">
+                <label class="quiz-level">
+                  <input type="radio" name="quiz-level" value="facil" checked>
+                  <span class="quiz-level-card"><span class="quiz-level-numeral">01</span><strong>FÁCIL</strong><small>Eventos e personagens principais</small></span>
+                </label>
+                <label class="quiz-level">
+                  <input type="radio" name="quiz-level" value="medio">
+                  <span class="quiz-level-card"><span class="quiz-level-numeral">02</span><strong>MÉDIO</strong><small>Pistas, locais e confrontos</small></span>
+                </label>
+                <label class="quiz-level">
+                  <input type="radio" name="quiz-level" value="dificil">
+                  <span class="quiz-level-card"><span class="quiz-level-numeral">03</span><strong>DIFÍCIL</strong><small>Experimentos e revelações</small></span>
+                </label>
+              </div>
+            </fieldset>
+            <button class="quiz-primary" type="button" id="quiz-start">INICIAR QUIZ <span aria-hidden="true">→</span></button>
+          </div>
+          <div class="quiz-play" id="quiz-play" hidden>
+            <div class="quiz-stats"><span id="quiz-counter">QUESTÃO 1 DE 25</span><span id="quiz-score">0 ACERTOS</span></div>
+            <div class="quiz-meter" aria-hidden="true"><span id="quiz-progress"></span></div>
+            <h4 class="quiz-question" id="quiz-question" tabindex="-1"></h4>
+            <div class="quiz-answers" id="quiz-options" aria-label="Alternativas"></div>
+            <p class="quiz-feedback" id="quiz-feedback" role="status" aria-live="polite" hidden></p>
+            <button class="quiz-primary" type="button" id="quiz-next" hidden>PRÓXIMA QUESTÃO</button>
+          </div>
+          <div class="quiz-result" id="quiz-result" hidden>
+            <span class="quiz-kicker">RESULTADO DA INVESTIGAÇÃO</span>
+            <strong class="quiz-final-score" id="quiz-final-score">0%</strong>
+            <h4 id="quiz-final-title" tabindex="-1">Investigador</h4>
+            <p id="quiz-final-summary"></p>
+            <div class="quiz-result-actions">
+              <button class="quiz-primary" type="button" id="quiz-replay">JOGAR NOVAMENTE <span aria-hidden="true">↻</span></button>
+              <button class="quiz-secondary" type="button" id="quiz-change-level">ALTERAR DIFICULDADE</button>
+            </div>
+          </div>
+          <noscript><p>Ative o JavaScript no navegador para jogar o quiz.</p></noscript>
         </div>
       </section>
       <section class="tab-panel" id="panel-secretos" role="tabpanel" tabindex="0" aria-labelledby="tab-secretos" hidden>
